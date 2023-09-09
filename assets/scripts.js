@@ -100,7 +100,7 @@ addEventListener('DOMContentLoaded', async () => {
         }).join('')}
             </tbody>
         `;
-        document.getElementById('root').innerHTML += table.outerHTML;
+        document.getElementById('root').innerHTML += `<div class="table-responsive">${table.outerHTML}</div>`;
     });
 });
 
