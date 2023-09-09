@@ -42,6 +42,9 @@ body {
     padding: 0.5rem 1rem;
     vertical-align: middle;
     white-space: nowrap;
+    min-width: 6.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
 }
 
 .table th:not(:nth-child(2)) {
@@ -52,6 +55,15 @@ body {
     white-space: normal;
     min-width: 15rem;
 }
+.table .positionColumn {
+    min-width: 4rem;
+    padding-left: 2rem;
+}
+
+.table .workoutColumn:last-child() {
+    padding-right: 2rem;
+}
+
 .positionColumn,
 .workoutColumn {
     text-align: center;
