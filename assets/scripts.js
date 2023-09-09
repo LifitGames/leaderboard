@@ -62,11 +62,11 @@ addEventListener('DOMContentLoaded', async () => {
 
     categories.map((category, index) => {
         resultsByCategory[category].sort((a, b) => {
-            if (a.position > b.position) {
+            if (a.pointsTotal > b.pointsTotal) {
                 return 1;
             }
 
-            if (a.position < b.position) {
+            if (a.pointsTotal < b.pointsTotal) {
                 return -1;
             }
 
