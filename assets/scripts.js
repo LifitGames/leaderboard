@@ -62,7 +62,31 @@ addEventListener('DOMContentLoaded', async () => {
 
     categories.map((category, index) => {
         resultsByCategory[category].sort((a, b) => {
-            return a.position - b.position;
+            if (a.position > b.position) {
+                return 1;
+            }
+
+            if (a.position < b.position) {
+                return -1;
+            }
+
+            if (a.workouts[4] > b.workouts[4]) {
+                return 1;
+            }
+
+            if (a.workouts[4] < b.workouts[4]) {
+                return -1;
+            }
+
+            if (a.workouts[0] > b.workouts[0]) {
+                return 1;
+            }
+
+            if (a.workouts[0] < b.workouts[0]) {
+                return -1;
+            }
+
+            return 0
         });
 
         const table = document.createElement('table');
@@ -85,10 +109,10 @@ addEventListener('DOMContentLoaded', async () => {
                 </tr>
             </thead>
             <tbody>
-                ${resultsByCategory[category].map((item) => {
+                ${resultsByCategory[category].map((item, index) => {
             return `
                         <tr>
-                            <td class="positionColumn">${item.position} <span>(${item.pointsTotal})</span></td>
+                            <td class="positionColumn">${index + 1} <span>(${item.pointsTotal})</span></td>
                             <td class="teamColumn">${item.team}</td>
                             ${item.workouts.map((result, index) => {
                 return `
