@@ -1,0 +1,64 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url(bg.jpg) no-repeat center center/cover fixed;
+    min-height: 100vh;
+}
+
+.loading {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 2rem;
+}
+
+.category-selector {
+    background-color: white;
+    border-radius: 0.25rem;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    width: 30rem;
+    max-width: calc(100% - 4rem);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.table {
+    display: none;
+    margin: 2rem;
+    max-width: calc(100% - 4rem);
+}
+
+.table.active {
+    display: table;
+}
+
+.table td {
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table th:not(:nth-child(2)) {
+    text-align: center;
+}
+
+.table .teamColumn {
+    white-space: normal;
+    min-width: 15rem;
+}
+.positionColumn,
+.workoutColumn {
+    text-align: center;
+}
+
+:is(.positionColumn, .workoutColumn) span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
