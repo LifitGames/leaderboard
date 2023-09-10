@@ -62,31 +62,17 @@ addEventListener('DOMContentLoaded', async () => {
 
     categories.map((category, index) => {
         resultsByCategory[category].sort((a, b) => {
-            if (a.pointsTotal > b.pointsTotal) {
-                return 1;
+            if (a.pointsTotal !== b.pointsTotal) {
+                return a.pointsTotal - b.pointsTotal;
             }
 
-            if (a.pointsTotal < b.pointsTotal) {
-                return -1;
+            if (a.points[4] !== b.points[4]) {
+                return a.points[4] - b.points[4];
             }
 
-            if (a.workouts[4] > b.workouts[4]) {
-                return 1;
+            if (a.points[0] !== b.points[0]) {
+                return a.points[0] - b.points[0];
             }
-
-            if (a.workouts[4] < b.workouts[4]) {
-                return -1;
-            }
-
-            if (a.workouts[0] > b.workouts[0]) {
-                return 1;
-            }
-
-            if (a.workouts[0] < b.workouts[0]) {
-                return -1;
-            }
-
-            return 0
         });
 
         const table = document.createElement('table');
