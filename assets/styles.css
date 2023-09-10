@@ -29,16 +29,12 @@ body {
 }
 
 .table-responsive {
+    display: none;
     padding: 1rem 2rem;
 }
-.table {
-    display: none;
+.table-responsive.show {
+    display: block;
 }
-
-.table.active {
-    display: table;
-}
-
 .table td {
     padding: 0.5rem 1rem;
     vertical-align: middle;
@@ -64,9 +60,9 @@ body {
     padding-right: 2rem;
 }
 
-.table tbody tr:nth-child(-n+3) .positionColumn {
-    background-color: #5b36dc;
+.table tbody tr:nth-child(1) .positionColumn {
     color: white;
+    background-color: #5b36dc;
 }
 
 .table tbody tr:nth-child(1) td {
