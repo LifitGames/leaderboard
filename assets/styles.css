@@ -28,10 +28,11 @@ body {
     margin: 0 auto 1rem;
 }
 
+.table-responsive {
+    padding: 1rem 2rem;
+}
 .table {
     display: none;
-    margin: 2rem;
-    max-width: calc(100% - 4rem);
 }
 
 .table.active {
@@ -57,13 +58,20 @@ body {
 }
 .table .positionColumn {
     min-width: 4rem;
-    padding-left: 2rem;
 }
 
 .table .workoutColumn:last-child() {
     padding-right: 2rem;
 }
 
+.table tbody tr:nth-child(-n+3) .positionColumn {
+    background-color: #5b36dc;
+    color: white;
+}
+
+.table tbody tr:nth-child(1) td {
+    font-weight: 600;
+}
 .workoutColumn.winner {
     color: #5b36dc;
     font-weight: 600;

@@ -76,7 +76,7 @@ addEventListener('DOMContentLoaded', async () => {
         });
 
         const table = document.createElement('table');
-        table.classList.add('table', 'table-striped');
+        table.classList.add('table', 'table-striped', 'table-borderless');
         if (index === 0) {
             table.classList.add('active');
         }
