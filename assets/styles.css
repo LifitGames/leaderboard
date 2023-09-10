@@ -64,6 +64,10 @@ body {
     padding-right: 2rem;
 }
 
+.workoutColumn.winner {
+    color: #5b36dc;
+    font-weight: 600;
+}
 .positionColumn,
 .workoutColumn {
     text-align: center;

@@ -102,7 +102,7 @@ addEventListener('DOMContentLoaded', async () => {
                             <td class="teamColumn">${item.team}</td>
                             ${item.workouts.map((result, index) => {
                 return `
-                                    <td class="workoutColumn">${formatWorkout(category, index, result, item.points[index])} </td>
+                                    <td class="workoutColumn ${item.points[index] == 1 ? 'winner' : ''}">${formatWorkout(category, index, result, item.points[index])} </td>
                                 `;
             }).join('')}
                         </tr>
